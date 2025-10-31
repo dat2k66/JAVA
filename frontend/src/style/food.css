@@ -1,0 +1,26 @@
+/* Food sales page specific */
+/* Table alignment */
+.table--foods { table-layout: fixed; }
+.table--foods th, .table--foods td { vertical-align: middle; }
+.table--foods tbody td { padding: 16px 18px; }
+.table--foods th:nth-child(1), .table--foods td:nth-child(1) { width: 60px; text-align: center; }
+.table--foods th:nth-child(2), .table--foods td:nth-child(2) { text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.table--foods th:nth-child(3), .table--foods td:nth-child(3) { width: 180px; text-align: left; }
+.table--foods th:nth-child(4), .table--foods td:nth-child(4) { width: 120px; text-align: center; font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1, "lnum" 1; }
+.table--foods th:nth-child(5), .table--foods td:nth-child(5) { width: 140px; text-align: right; font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1, "lnum" 1; }
+.table--foods td:nth-child(5) { text-align: right !important; }
+.table--foods th:nth-child(6), .table--foods td:nth-child(6) { width: 180px; text-align: center; }
+.table--foods thead th:nth-child(1) { text-align: center; }
+.table--foods thead th:nth-child(2) { text-align: left; }
+.table--foods thead th:nth-child(3) { text-align: left; }
+.table--foods thead th:nth-child(4) { text-align: center; }
+.table--foods thead th:nth-child(5) { text-align: right; }
+.table--foods thead th:nth-child(6) { text-align: center; }
+
+/* Actions */
+.actions { display: flex; gap: 10px; justify-content: center; }
+.icon-btn { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 10px; border: 1px solid var(--border); background: #fff; cursor: pointer; transition: transform .12s ease, box-shadow .2s ease; }
+.icon-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(148,163,209,.25); }
+.icon-btn--purchase { background: linear-gradient(135deg, #ffd7ba, #ffb5d8); border-color: transparent; }
+.icon-btn--danger { background: #fff5f5; border-color: rgba(185,28,28,.25); }
+

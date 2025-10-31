@@ -1,0 +1,55 @@
+/* Ticket sales page specific */
+.ticket__header h2 { margin: 0 0 6px 0; font-size: 22px; color: #6c63ff; }
+.ticket__header p { margin: 0; color: var(--text-muted); }
+.ticket__controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.ticket__controls .left { display: flex; gap: 12px; }
+.ticket__controls .right { display: flex; gap: 12px; }
+
+/* Table alignment for ticket list */
+.table--tickets { table-layout: fixed; }
+.table--tickets th, .table--tickets td { vertical-align: middle; }
+.table--tickets tbody td { padding: 16px 18px; }
+.table--tickets th:nth-child(1), .table--tickets td:nth-child(1) { width: 60px; text-align: center; }
+.table--tickets th:nth-child(2), .table--tickets td:nth-child(2) { text-align: left; white-space: normal; overflow: visible; text-overflow: initial; word-break: break-word; }
+.table--tickets th:nth-child(3), .table--tickets td:nth-child(3) { width: 180px; text-align: left; }
+.table--tickets th:nth-child(4), .table--tickets td:nth-child(4) { width: 200px; text-align: left; }
+.table--tickets th:nth-child(5), .table--tickets td:nth-child(5) { width: 110px; text-align: center; }
+.table--tickets th:nth-child(6), .table--tickets td:nth-child(6) { width: 130px; text-align: right; font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1, "lnum" 1; }
+.table--tickets th:nth-child(7), .table--tickets td:nth-child(7) { width: 130px; text-align: right; font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1, "lnum" 1; }
+.table--tickets th:nth-child(8), .table--tickets td:nth-child(8) { width: 100px; text-align: right; font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1, "lnum" 1; }
+.table--tickets th:nth-child(9), .table--tickets td:nth-child(9) { width: 140px; text-align: center; }
+
+.table--tickets thead th:nth-child(1) { text-align: center; }
+.table--tickets thead th:nth-child(2) { text-align: left; }
+.table--tickets thead th:nth-child(3) { text-align: left; }
+.table--tickets thead th:nth-child(4) { text-align: left; }
+.table--tickets thead th:nth-child(5) { text-align: center; }
+.table--tickets thead th:nth-child(6) { text-align: right; }
+.table--tickets thead th:nth-child(7) { text-align: right; }
+.table--tickets thead th:nth-child(8) { text-align: right; }
+.table--tickets thead th:nth-child(9) { text-align: center; }
+
+/* Pills and badges */
+.movie { display: flex; flex-direction: column; gap: 6px; }
+.movie__meta { display: flex; gap: 8px; }
+.pill { display: inline-flex; align-items: center; border: 1px solid transparent; padding: 4px 8px; border-radius: 999px; font-size: 12px; }
+.badge { padding: 6px 10px; border-radius: 8px; font-weight: 600; font-size: 12px; }
+.badge--success { background: #ecfdf5; color: #059669; }
+.badge--danger { background: #fef2f2; color: #b91c1c; }
+
+/* Seat Picker */
+.seat { display: grid; gap: 14px; }
+.seat__legend { display: flex; gap: 10px; align-items: center; }
+.legend { padding: 6px 10px; border-radius: 999px; font-size: 12px; border: 1px solid var(--border); }
+.legend--available { background: #f8fafc; color: #334155; }
+.legend--selected { background: #eef2ff; color: #4f46e5; border-color: rgba(79,70,229,.4) }
+.legend--occupied { background: #fee2e2; color: #b91c1c; border-color: rgba(185,28,28,.3) }
+
+.seat__screen { text-align: center; padding: 8px 12px; border-radius: 10px; background: linear-gradient(180deg,#f3f4f6,#e5e7eb); border: 1px solid var(--border); color: #6b7280; }
+.seatmap { display: grid; gap: 8px; align-items: center; justify-items: center; padding: 12px; background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(245,248,255,0.92)); border: 1px solid var(--border); border-radius: 14px; }
+.seat__gap { width: 10px; height: 1px; }
+.seat__item { width: 42px; height: 42px; display: grid; place-content: center; gap: 2px; border-radius: 10px; border: 1px solid var(--border); background: #ffffff; cursor: pointer; color: #334155; transition: transform .12s ease, box-shadow .2s ease, background .2s ease; }
+.seat__item:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(30,139,255,.2); }
+.seat__item small { font-size: 10px; opacity: .6; }
+.seat__item--selected { background: linear-gradient(135deg,#7f7bff,#1e8bff); color: #fff; border-color: transparent; box-shadow: 0 8px 18px rgba(30,139,255,.35); }
+.seat__item--occupied { background: #fef2f2; color: #b91c1c; border-color: rgba(185,28,28,.3); cursor: not-allowed; box-shadow: none; }
