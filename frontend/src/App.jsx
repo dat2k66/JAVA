@@ -1,25 +1,65 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import Sidebar from './components/Sidebar.jsx';
-import TicketSales from './pages/TicketSales.jsx';
-import FoodSales from './pages/FoodSales.jsx';
+import Analytics from './pages/Analytics.jsx';
 
 function App() {
-  const [view, setView] = useState('ticket-sales');
+  const [activePage, setActivePage] = useState('dashboard');
+  const [activeTab, setActiveTab] = useState('now');
+
+  const { nowShowingMovies, upcomingMovies } = useMemo(() => ({
+    nowShowingMovies: [{
+      id: 'now-1',
+      image: '/hinh1.jpg',
+      title: 'Bịt Mắt Bắt Tai',
+      genre: 'Giật gân, Hồi Hộp',
+      duration: '92 phút'
+    }, {
+      id: 'now-2',
+      image: '/hinh2.jpg',
+      title: 'Thành Phố Thất Lạc',
+      genre: 'Hành động, Phiêu lưu',
+      duration: '105 phút'
+    }, {
+      id: 'now-3',
+      image: '/hinh3.jpg',
+      title: 'Vực Thẳm Vô Hình',
+      genre: 'Kinh dị, Tâm lý',
+      duration: '98 phút'
+    }],
+    upcomingMovies: [{
+      id: 'upcoming-1',
+      image: '/hinh4.jpg',
+      title: 'Cải Mả',
+      genre: 'Giật gân, Hồi Hộp',
+      duration: '92 phút'
+    }, {
+      id: 'upcoming-2',
+      image: '/hinh5.jpg',
+      title: 'Kinh Dị Nhật Vị',
+      genre: 'Kinh dị, Hồi hộp',
+      duration: '104 phút'
+    }, {
+      id: 'upcoming-3',
+      image: '/hinh6.jpg',
+      title: 'Phá Đám Sinh Nhật Mẹ',
+      genre: 'Hài, Gia đình',
+      duration: '101 phút'
+    }]
+  }), []);
+
+  const moviesToRender = activeTab === 'now' ? nowShowingMovies : upcomingMovies;
+
   return (
     <div className="app-shell">
-      <Sidebar activeView={view} onNavigate={setView} />
+      <Sidebar activePage={activePage} onNavigate={setActivePage} />
 
       <main className="main-view">
-        {view === 'ticket-sales' ? (
-          <TicketSales />
-        ) : view === 'food-sales' ? (
-          <FoodSales />
-        ) : (
+        {activePage === 'dashboard' ? (
           <section className="dashboard">
             <div className="dashboard__hero">
               <img className="dashboard__hero-image" src="/banner.png" alt="Cinema Banner" />
               <div className="dashboard__welcome">
-                <p>Xin chào</p>
+                <p>Xin chào A</p>
                 <p>Mừng quay trở lại!</p>
               </div>
             </div>
@@ -27,7 +67,7 @@ function App() {
             <div className="dashboard__stats">
               {[{
                 id: 'films',
-                title: 'Số lượng phim',
+                title: 'Số lượng phim:',
                 value: '50'
               }, {
                 id: 'ticket-count',
@@ -45,7 +85,36 @@ function App() {
                 </article>
               ))}
             </div>
+            <div className="than1">
+              <button
+                type="button"
+                className={`than1__tab ${activeTab === 'now' ? 'than1__tab--active' : ''}`}
+                onClick={() => setActiveTab('now')}
+              >
+                PHIM ĐANG CHIẾU
+              </button>
+              <button
+                type="button"
+                className={`than1__tab ${activeTab === 'upcoming' ? 'than1__tab--active' : ''}`}
+                onClick={() => setActiveTab('upcoming')}
+              >
+                PHIM SẮP CHIẾU
+              </button>
+            </div>
+            <div className="dangchieu">
+              {moviesToRender.map((movie) => (
+                <div key={movie.id} className="the1">
+                  <img src={movie.image} alt={movie.title} />
+                  <h1>{movie.title}</h1>
+                  <p>Thể loại: {movie.genre}</p>
+                  <p>Thời lượng: {movie.duration}</p>
+                  <button className="buy" type="button">MUA VÉ</button>
+                </div>
+              ))}
+            </div>
           </section>
+        ) : (
+          <Analytics />
         )}
       </main>
     </div>
@@ -53,4 +122,3 @@ function App() {
 }
 
 export default App;
-
