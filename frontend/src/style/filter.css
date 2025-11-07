@@ -1,3 +1,50 @@
+:root {
+  --control-h: 42px;
+  --btn-px: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--control-h);
+  padding: 0 var(--btn-px);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(148,163,209,.25);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7f7bff, #1e8bff);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 18px rgba(30,139,255,.35);
+}
+
+.search {
+  height: var(--control-h);
+  min-width: 280px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 0 16px;
+  background: #fff;
+}
+
+.search:focus {
+  outline: none;
+  border-color: #7f7bff;
+  box-shadow: 0 0 0 3px rgba(127,123,255,.3);
+}
+
 /* Shared filter bar styles */
 .filterbar { display: grid; gap: 14px; padding: 16px; border: 1px solid var(--border); border-radius: 14px; background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(246,248,255,.92)); box-shadow: 0 10px 24px rgba(148,163,209,.18); margin-bottom: 18px; }
 .filterbar__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }

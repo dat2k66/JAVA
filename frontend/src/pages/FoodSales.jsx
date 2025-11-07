@@ -64,7 +64,7 @@ export default function FoodSales() {
   };
 
   return (
-    <section className="ticket">
+    <section className="food-sales">
       <header className="ticket__header fade-in">
         <h2>Bán đồ ăn</h2>
         <p>Quản lý sản phẩm bắp nước và combo tại quầy.</p>

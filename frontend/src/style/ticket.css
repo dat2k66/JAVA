@@ -1,14 +1,57 @@
 /* Ticket sales page specific */
-.ticket__header h2 { margin: 0 0 6px 0; font-size: 22px; color: #6c63ff; }
-.ticket__header p { margin: 0; color: var(--text-muted); }
-.ticket__controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-.ticket__controls .left { display: flex; gap: 12px; }
-.ticket__controls .right { display: flex; gap: 12px; }
+.ticket-sales__header {
+  margin-bottom: 16px;
+}
+
+.ticket-sales__header h2 {
+  margin: 0 0 6px 0;
+  font-size: 22px;
+  color: var(--text-primary);
+}
+
+.ticket-sales__header p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.ticket-sales__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ticket-sales__controls .left {
+  display: flex;
+  gap: 12px;
+}
+
+.ticket-sales__controls .right {
+  display: flex;
+  gap: 12px;
+}
 
 /* Table alignment for ticket list */
-.table--tickets { table-layout: fixed; }
-.table--tickets th, .table--tickets td { vertical-align: middle; }
-.table--tickets tbody td { padding: 16px 18px; }
+.table--tickets {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table--tickets th, .table--tickets td {
+  vertical-align: middle;
+  padding: 16px 18px;
+}
+
+.table--tickets tbody tr:hover {
+  background-color: rgba(240, 245, 255, 0.9);
+}
+
+.table--tickets th {
+  background-color: rgba(240, 245, 255, 0.9);
+  font-weight: 600;
+}
+
 .table--tickets th:nth-child(1), .table--tickets td:nth-child(1) { width: 60px; text-align: center; }
 .table--tickets th:nth-child(2), .table--tickets td:nth-child(2) { text-align: left; white-space: normal; overflow: visible; text-overflow: initial; word-break: break-word; }
 .table--tickets th:nth-child(3), .table--tickets td:nth-child(3) { width: 180px; text-align: left; }
@@ -34,15 +77,15 @@
 .movie__meta { display: flex; gap: 8px; }
 .pill { display: inline-flex; align-items: center; border: 1px solid transparent; padding: 4px 8px; border-radius: 999px; font-size: 12px; }
 .badge { padding: 6px 10px; border-radius: 8px; font-weight: 600; font-size: 12px; }
-.badge--success { background: #ecfdf5; color: #059669; }
-.badge--danger { background: #fef2f2; color: #b91c1c; }
+.badge--success { background: #dcfce7; color: #16a34a; }
+.badge--danger { background: #fee2e2; color: #dc2626; }
 
 /* Seat Picker */
 .seat { display: grid; gap: 14px; }
 .seat__legend { display: flex; gap: 10px; align-items: center; }
 .legend { padding: 6px 10px; border-radius: 999px; font-size: 12px; border: 1px solid var(--border); }
 .legend--available { background: #f8fafc; color: #334155; }
-.legend--selected { background: #eef2ff; color: #4f46e5; border-color: rgba(79,70,229,.4) }
+.legend--selected { background: #e0e7ff; color: #4338ca; border-color: rgba(67, 56, 202, 0.4) }
 .legend--occupied { background: #fee2e2; color: #b91c1c; border-color: rgba(185,28,28,.3) }
 
 .seat__screen { text-align: center; padding: 8px 12px; border-radius: 10px; background: linear-gradient(180deg,#f3f4f6,#e5e7eb); border: 1px solid var(--border); color: #6b7280; }
@@ -51,5 +94,6 @@
 .seat__item { width: 42px; height: 42px; display: grid; place-content: center; gap: 2px; border-radius: 10px; border: 1px solid var(--border); background: #ffffff; cursor: pointer; color: #334155; transition: transform .12s ease, box-shadow .2s ease, background .2s ease; }
 .seat__item:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(30,139,255,.2); }
 .seat__item small { font-size: 10px; opacity: .6; }
-.seat__item--selected { background: linear-gradient(135deg,#7f7bff,#1e8bff); color: #fff; border-color: transparent; box-shadow: 0 8px 18px rgba(30,139,255,.35); }
-.seat__item--occupied { background: #fef2f2; color: #b91c1c; border-color: rgba(185,28,28,.3); cursor: not-allowed; box-shadow: none; }
+.seat__item--selected { background: linear-gradient(135deg,#818cf8,#60a5fa); color: #fff; border-color: transparent; box-shadow: 0 8px 18px rgba(96, 165, 250, 0.35); }
+.seat__item--occupied { background: #fecaca; color: #991b1b; border-color: rgba(153, 27, 27, 0.3); cursor: not-allowed; box-shadow: none; }
+

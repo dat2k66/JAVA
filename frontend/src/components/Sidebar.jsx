@@ -36,15 +36,15 @@ function Sidebar({ activePage, onNavigate }) {
 
           {isToolsOpen && (
             <div className="sidebar__dropdown-menu">
-             <button type="button">
-              Lên lịch chiếu
-             </button>
-             <button type="button">
-              Bán vé
-             </button>
-             <button type="button">
-             Bán đồ ăn
-              </button>
+              <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('schedule'); }}>
+                Lên lịch chiếu
+              </a>
+              <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('ticketsales'); }}>
+                Bán vé
+              </a>
+              <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('foodsales'); }}>
+                Bán đồ ăn
+              </a>
             </div>
           )}
         </div>

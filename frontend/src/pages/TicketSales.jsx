@@ -55,7 +55,7 @@ export default function TicketSales() {
   }, [createOpen]);
 
   return (
-    <section className="ticket">
+    <section className="ticket-sales">
       <header className="ticket__header fade-in">
         <h2>Bán vé</h2>
         <p>Quản lý các suất chiếu và tiến hành bán vé.</p>

@@ -1,6 +1,8 @@
 import React, { useMemo, useState } from 'react';
 import Sidebar from './components/Sidebar.jsx';
 import Analytics from './pages/Analytics.jsx';
+import FoodSales from './pages/FoodSales.jsx';
+import TicketSales from './pages/TicketSales.jsx';
 
 function App() {
   const [activePage, setActivePage] = useState('dashboard');
@@ -113,6 +115,10 @@ function App() {
               ))}
             </div>
           </section>
+        ) : activePage === 'ticketsales' ? (
+          <TicketSales />
+        ) : activePage === 'foodsales' ? (
+          <FoodSales />
         ) : (
           <Analytics />
         )}
