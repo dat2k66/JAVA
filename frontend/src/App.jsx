@@ -3,6 +3,8 @@ import Sidebar from './components/Sidebar.jsx';
 import Analytics from './pages/Analytics.jsx';
 import FoodSales from './pages/FoodSales.jsx';
 import TicketSales from './pages/TicketSales.jsx';
+import Schedule from './pages/Schedule.jsx';
+
 
 function App() {
   const [activePage, setActivePage] = useState('dashboard');
@@ -119,7 +121,9 @@ function App() {
           <TicketSales />
         ) : activePage === 'foodsales' ? (
           <FoodSales />
-        ) : (
+        ) : activePage === 'schedule' ? (
+          <Schedule />
+        ):(
           <Analytics />
         )}
       </main>

@@ -514,3 +514,32 @@ body {
   box-shadow: 0 0 0 3px rgba(30, 139, 255, 0.25);
 }
 
+.btn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+/* Màu nhạt hơn, pastel nhẹ */
+.btn-add {
+  background-color: #7cd48b; /* xanh lá nhạt */
+  color: white;
+}
+
+.btn-edit {
+  background-color: #6fb3e6; /* xanh dương nhạt */
+  color: white;
+}
+
+.btn-delete {
+  background-color: #f28b8b; /* đỏ nhạt */
+  color: white;
+}
